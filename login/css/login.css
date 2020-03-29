@@ -1,0 +1,91 @@
+body,html{
+margin: 0 auto;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* start*/
+body{
+background: #0f7ad1;
+}
+.main{
+    width: 100%;
+    height: 338px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.main .content{
+    width: 881px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.main .content .title{
+    position: absolute;
+    top: -47px;
+    left: 50%;
+    font-size: 20px;
+    padding-left: 35px;
+    color: #fff;
+    background-image: url(../images/logo_36.png);
+    background-repeat: no-repeat;
+    transform: translate(-50%,0);
+}
+.main .content .content-main{
+    margin: 0 auto;
+    width: 881px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.main .content .content-main .img{
+
+}
+.main .content .content-main .login{
+height: 279px;
+margin-left: 75px;
+}
+.main .content .content-main .login h2{
+    color: #126794;
+}
+.main .content .content-main .login label{
+    display: inline-block;
+    width: 48px;
+    font-size: 0px;
+    text-align:justify;
+    text-justify:distribute-all-lines;/*ie6-8*/
+    text-align-last:justify;/* ie9*/
+    -moz-text-align-last:justify;/*ff*/
+    -webkit-text-align-last:justify;/*chrome 20+*/
+}
+.main .content .content-main .login label span{
+    font-size: 16px;
+}
+.main .content .content-main .login input{
+    margin-top: 16px;
+    border: 1px solid #c7ceed;
+    height: 33px;
+    width: 232px;
+    box-sizing: border-box;
+}
+.main .content .content-main .login p{
+    margin-left: 50px;
+}
+.main .content .content-main .login .login-button{
+    border: none;
+    width: 232px;
+    height: 30px;
+    color: #fff;
+    background-color: #1aa97b;
+    margin-left: 50px;
+
+}
+.hint{
+    color: #d8002e;
+}

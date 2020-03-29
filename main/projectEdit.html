@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../layui-v2.5.5/layui/css/layui.css">
+    <link rel="stylesheet" href="./css/projectEdit.css">
+    <title>项目编辑</title>
+</head>
+
+<body>
+    <div class="left catalog">
+        <div class="hide-scroll">
+            <h2 class="tree-title">报告大纲</h2>
+            <div id="tree" class="demo-tree-more"></div>
+            <!--目录-->
+        </div>
+    </div>
+    <div class="hide-show-buttom"></div>
+    <!--点击隐藏与现实-->
+    <div class="right content">
+        <div class="r-title-top">
+            <div class="r-left">
+                <h4>项目名称：陕西延长石油富县电厂2X1000MW工程空冷气象观测与参数对比分析报告</h4>
+                <div class="time-or-name">
+                    <span>上次修改时间:2018/02/03</span>
+                    <span>编写人员：张丹 王露</span>
+                </div>
+            </div>
+            <div class="r-right">
+                <button type="button" class="layui-btn" id="goBack">返回</button>
+                <button type="button" class="layui-btn" id="preview">预览</button>
+                <button type="button" class="layui-btn" id="save">保存</button>
+            </div>
+        </div>
+        <div class="edit">
+            <div class="edit-left">
+                <script id="container" name="content" type="text/plain"></script>
+            </div>
+            <div class="edit-template">
+                <div class="edit-template-title">
+                    <div class="edit-template-title-text">示例分析模板</div>
+                    <div class="edit-template-title-btn">插入模板</div>
+                </div>
+                <div class="edit-template-content"></div>
+            </div>
+        </div>
+        <div class="btn-upload">
+            <img src="./images/upload.png" alt="" width="100%">
+        </div>
+        <div class="editBottom">
+            <iframe id="iframe-chapter" src="./projectEditTemplate/4.html" frameborder="0" width="100%"></iframe>
+            <!-- <iframe id="iframe-chapter" src="./projectEditTemplate/4.html"  frameborder="0" width="100%"></iframe> -->
+        </div>
+    </div>
+    <script src="../frameResource/js/jquer.js"></script>
+    <!-- ueditor编辑器 -->
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="../ueditor1_4_3_3-utf8-jsp/utf8-jsp/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="../ueditor1_4_3_3-utf8-jsp/utf8-jsp/ueditor.all.js"></script>
+
+    <script src="../ueditor1_4_3_3-utf8-jsp/utf8-jsp/lang/zh-cn/zh-cn.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+
+    </script>
+    <!--  -->
+    <script src="../layui-v2.5.5/layui/layui.js"></script>
+    <script src="./js/route.js"></script>
+    <script src="./js/projectEdit.js"></script>
+</body>
+
+</html>

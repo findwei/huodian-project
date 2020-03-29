@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./layui-v2.5.5/layui/css/layui.css">
+    <link rel="stylesheet" href="./frameResource/css/admin.css">
+    <link rel="stylesheet" href="./frameResource/css/index.css">
+    <title></title>
+</head>
+<body>
+    <div class="layui-full-container">
+        <ul class="layui-nav">
+            <li class="logo-title">
+                <a href="" class="title">火（热）电工程气候可行性论证业务系统</a>
+            </li>
+            <li class="layui-nav-item hd-right">
+                <a href="" class="user-name">欢迎您！Admin</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">修改密码</a></dd>
+                    <dd class="user-exit"><a href="javascript:;">退了</a></dd>
+                </dl>
+            </li>
+            <!-- <li class=" hd-help"><img src="./frameResource/images/help.png" class="">帮助</li> -->
+        </ul>
+    </div>
+    <div class="layui-body">
+            <iframe id="kj-container" src="./main/projectEdit.html" frameborder="0" class="layadmin-iframe"></iframe>
+        <!-- <iframe id="kj-container" src="./main/projectEdit.html" frameborder="0" class="layadmin-iframe"></iframe> -->
+    </div>
+    <script src="./frameResource/js/jquer.js"></script>
+    <script src="./layui-v2.5.5/layui/layui.js"></script>
+    <script src="./frameResource/js/index.js"></script>
+    <script src="./main/js/route.js"></script>
+    <script>
+        // token验证
+        function verifyToken() {
+            $('.user-name').text(`欢迎您！${window.localStorage.user}`);
+            $.ajax({
+                type: "GET",
+                url: `${userPATH}/valideToken`,
+                data: "",
+                headers: {
+                    token: window.localStorage.getItem('token')
+                },
+                success: function(response) {
+                    if (response.st !== 'no-overdue') {
+                        window.location.href = './login/login.html'
+                    }
+                },
+                error: function() {
+                    window.location.href = './login/login.html'
+                }
+
+            });
+        }
+        verifyToken();
+        // 退出登录
+        $('.user-exit').click(function(e) {
+            e.preventDefault();
+            window.localStorage.removeItem('token');
+            window.localStorage.removeItem('user');
+            window.localStorage.removeItem('userId');
+            verifyToken();
+        });
+
+        function addIframe() {
+            // $('<iframe id="kj-container" src="./main/projectEdit.html" frameborder="0" class="layadmin-iframe"></iframe>').appendTo('.layui-body');
+            // $('<iframe id="kj-container" src="./main/myProject.html" frameborder="0" class="layadmin-iframe"></iframe>').appendTo('.layui-body');
+        }
+        addIframe();
+    </script>
+    
+</body>
+
+</html>

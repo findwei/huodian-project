@@ -1,0 +1,259 @@
+.accountUserInfo {
+    display: none;
+}
+
+.top {
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    position: relative;
+}
+
+.top-main {
+    height: 100%;
+}
+
+.top .top-project-title {
+    font-size: 18px;
+    font-weight: 700px;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    line-height: 70px;
+    padding: 0 25px 0 25px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    cursor: pointer;
+}
+
+.top .top-account-title {
+    font-size: 18px;
+    font-weight: 700px;
+    position: absolute;
+    left: 140px;
+    height: 100%;
+    line-height: 70px;
+    padding: 0 25px 0 25px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    cursor: pointer;
+}
+
+.top .show {
+    background-image: url(../images/line.jpg);
+}
+
+.top .search-box {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.top .search-btn {
+    background-color: #0077d4;
+}
+
+.layui-main {
+    width: 1000px;
+}
+
+.select-box {
+    margin-top: 15px;
+    width: 100%;
+    height: 113px;
+    border-radius: 8px;
+    background-color: #fff;
+    padding-left: 20px;
+}
+
+.select-box .category {
+    height: 55px;
+    line-height: 55px;
+}
+
+.select-box .category span,
+.select-box .rest span {
+    color: #666;
+}
+
+.select-box .category ul {
+    display: inline-block;
+}
+
+.select-box .category ul li {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 23px;
+    padding: 0 20px;
+    margin: 16px 5px;
+    border-radius: 15px;
+    line-height: 23px;
+    cursor: pointer;
+}
+
+.project .category .filter-show {
+    background-color: #009dff;
+    color: #fff;
+}
+
+hr {
+    margin: 0;
+}
+
+.select-box .rest {
+    height: 55px;
+    line-height: 55px;
+}
+
+.select-box .rest span {
+    display: inline-block;
+    height: 55px;
+    line-height: 55px;
+}
+
+.select-box .rest ul {
+    display: inline-block;
+}
+
+.select-box .rest ul li {
+    display: inline-block;
+}
+
+
+/* 项目新增 */
+
+.porject-item {
+    overflow: hidden;
+}
+
+.porject-item .new {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 166px;
+    background-color: #e7eaea;
+    color: #7f7f7f;
+    border: 1px dashed #dddddd !important;
+    cursor: pointer;
+}
+
+.porject-item .item {
+    width: 317px;
+    height: 166px;
+    float: left;
+    margin-right: 24px;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    position: relative;
+    margin-top: 15px;
+}
+
+.porject-item .item:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+
+/* 项目管理 */
+
+.item .main .title {
+    overflow: hidden;
+    padding-top: 18px;
+    padding-right: 24px;
+}
+
+.item .main .title p {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background-color: #009eff;
+    text-align: center;
+    color: #fff;
+    margin: 0 12px 0 12px;
+    display: inline-block;
+}
+
+.item .main .title h4 {
+    width: 222px;
+    display: inline-block;
+}
+
+.item .main .time {
+    margin-left: 70px;
+    color: #a1a1a1;
+}
+
+.item .editor {
+    position: absolute;
+    bottom: 0px;
+    height: 40px;
+    width: 100%;
+    background-color: #eaeded;
+    color: #939393;
+}
+
+.item .editor div {
+    float: left;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.item .editor div::after {
+    content: '';
+    width: 1px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background-color: #c0c0c0;
+}
+
+.item .editor div:nth-of-type(4)::after {
+    content: '';
+    width: 0px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    background-color: #c0c0c0;
+}
+
+
+/* 账户管理 */
+
+.accountUserInfo {
+    display: non;
+}
+
+.layui-main.account {
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 20px;
+    display: none;
+}
+
+.account .account-top {
+    text-align: right;
+}
+
+.account .account-top .allUser {
+    text-align: left;
+    float: left;
+    width: 100px;
+    line-height: 38px;
+    height: 100%;
+}
+
+.account .user-pop-up-edit {
+    width: 100%;
+}
+
+
+/*弹窗遮罩 */
+
+.layui-layer-shade {
+    z-index: 999;
+}

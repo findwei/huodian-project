@@ -1,0 +1,68 @@
+.layui-nav {
+    background-color: #0077d4;
+    /* min-width: 1000px; */
+}
+
+.layui-nav .hd-right {
+    right: 30px;
+    position: absolute;
+    z-index: 999;
+}
+
+.layui-nav .hd-help {
+    right: 50px;
+    position: absolute;
+}
+
+.layui-nav a.title {
+    background-image: url(../images/logo_36.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+.layui-nav .logo-title {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 60px;
+}
+
+.layui-nav .logo-title a {
+    display: block;
+    /* padding: 0 20px; */
+    color: #fff;
+    font-size: 16px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.layui-nav .hd-help {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+.layadmin-iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.layui-body {
+    position: absolute;
+    left: 0px;
+    right: 0;
+    top: 60px;
+    bottom: 0;
+    z-index: 998;
+    width: auto;
+    overflow-y: auto;
+    box-sizing: border-box;
+}

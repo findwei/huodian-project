@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myProject</title>
+    <link rel="stylesheet" href="../layui-v2.5.5/layui/css/layui.css">
+    <link rel="stylesheet" href="./css/myProject.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="layui-main top-main">
+            <div class="top-project-title show">项目管理</div>
+            <div class="top-account-title accountUserInfo">账户管理</div>
+            <div class="search-box">
+                <div class="layui-input-inline">
+                    <input type="text" name="title" id="search" required lay-verify="" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                </div>
+                <button class="layui-btn serach-btn" lay-submit lay-filter="">搜索</button>
+            </div>
+        </div>
+    </div>
+    <!-- 项目管理 -->
+    <div class="layui-main project" style="">
+        <div class="select-box">
+            <div class="category">
+                <span>所属项目：</span>
+                <ul>
+                    <li class="filter-show" data-type="all">全部</li>
+                    <li data-type="1">直接空冷</li>
+                    <li data-type="2">间接空冷</li>
+                    <li data-type="3">水冷</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="rest">
+                <div class="layui-form-item layui-inline" style="margin: 0;">
+                    <div class="" style="display: inline-block; color: #666;">开始时间:</div>
+                    <div class="layui-inline">
+                        <input type="text" id="time1" class="layui-input test-item" placeholder="yyyy-MM-dd">
+                    </div>
+                </div>
+                <div class="layui-input-inline">
+                    <label class="layui-inline" style="color: #666;">完成情况：</label>
+                    <form class="layui-form layui-inline" action="">
+                        <select name="city" lay-verify="">
+                            <option value="">请选择完成情况</option>
+                            <option value="010">完成</option>
+                            <option value="021">未完成</option>
+                        </select>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="porject-item">
+            <div class="new item">+新增项目</div>
+        </div>
+    </div>
+    <!-- user信息管理 -->
+    <div class="layui-main account">
+        <div class="account-top">
+            <div class="allUser">全部用户：</div>
+            <button class="layui-btn add-user">+新增用户</button>
+        </div>
+        <table id="user" lay-filter="user"></table>
+        <!-- 工具条模板 -->
+        <script type="text/html" id="barDemo">
+            <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+        </script>
+
+    </div>
+    <!-- 新增弹窗 -->
+    <form class="layui-form user-pop-up-edit" lay-filter="userInfo" style="display: none;">
+        <div class="layui-form-item user-title-box" style="padding-right: 46px; padding-top: 20px;">
+            <label class="layui-form-label">用户名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="count" placeholder="请输入" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item user-name-box" style="padding-right: 46px;">
+            <label class="layui-form-label">姓名</label>
+            <div class="layui-input-block">
+                <input type="text" name="name" placeholder="请输入" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item user-state-box" style="padding-right: 46px;">
+            <label class="layui-form-label">用户状态</label>
+            <div class="layui-input-block">
+                <div class="layui-input-inline">
+                    <select name="status" lay-verify="status" lay-search="">
+                            <option value="">请选择状态</option>
+                            <option value="1">启用</option>
+                            <option value="0">禁用</option>
+                        </select>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item user-power-box" style="padding-right: 46px;">
+            <label class="layui-form-label">项目权限</label>
+            <div class="layui-input-block">
+                <div class="layui-input-inline">
+                    <select name="roleId" lay-verify="roleId" lay-search="" class="roleId">
+                            <option value="" class="tip">请选择状态</option>
+                        </select>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="../frameResource/js/jquer.js"></script>
+    <script src="../layui-v2.5.5/layui/layui.js"></script>
+    <script src="./js/route.js"></script>
+    <script src="./js/myProject.js"></script>
+
+    <script>
+        // window.localStorage.setItem('projectId', '1')
+    </script>
+
+</body>
+
+</html>
